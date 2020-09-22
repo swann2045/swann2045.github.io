@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#box1 {
+  width: 600px;
+  height: 300px;
+  background-color: #80deea;
+  font-size: 48px;
+}
+#input {
+  margin-top: 16px;
+  width: 600px;
+  height: 60px;
+  font-size: 48px;
+  padding: 0;
+}
+#button {
+  width: 200px;
+  height: 60px;
+  font-size: 36px;
+  margin-top: 16px;
+  background-color: #80deea;
+}
+</style>
+</head>
+
+<body>
+    <div id="box1">test</div>
+    <input id="input" type="text"><br>
+    <button id="button" onclick="myFunction()">OK</button>
+
+<script>
+// document.write("hello");
+document.getElementById('box1').innerHTML = "box2";
+
+function myFunction() {
+  var inputText = document.getElementById('input').value;
+  document.getElementById('box1').innerHTML = inputText;
+  document.getElementById('input').value = "";
+}
+</script>
+</body>
+
+</html>
