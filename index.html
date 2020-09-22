@@ -3,36 +3,56 @@
 <head>
 <style>
 #box1 {
-  display: inline-block;
-  position: relative;
-  top: 20px;
-  left: 20px;
+  width: 600px;
+  height: 300px;
+  background-color: #80deea;
+  font-size: 48px;
+}
+#box2 {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  height: 300px;
+  background-color: #ff9999;
+  font-size: 48px;
+}
+#input {
+  margin-top: 16px;
+  width: 600px;
+  height: 60px;
+  font-size: 48px;
+  padding: 0;
+}
+#button {
   width: 200px;
-  height: 200px;
-  background-color: blue;
-  color: white;
+  height: 60px;
   font-size: 36px;
-  border: dashed 0px #000000;
-  border-radius: 48px 0 48px 0;
+  margin-top: 16px;
+  background-color: #80deea;
+  border-radius: 32px;
+  border: dashed 2px #000000;
 }
 
-#box2 {
-  display: inline-block;
-  position: relative;
-  top: 20px;
-  left: 0px;
-  width: 200px;
-  height: 200px;
-  background-color: #00ff55;
-  color: white;
-  font-size: 36px;
-}
 </style>
 </head>
 
 <body>
-    <div id="box1">box1</div>
-    <div id="box2">box2</div>
+  <div id="box1">BOX1</div>
+  <div id="box2">BOX2</div>
+  <input id="input" type="text"><br>
+  <button id="button" onclick="myFunction()">RUN</button>
+
+  <script>
+    //document.write("hello");
+    document.getElementById('box1').innerHTML = "DxD 안녕하세요";
+    
+    function myFunction() {
+      var inputText = document.getElementById('input').value;
+      document.getElementById('box2').innerHTML = inputText;
+      document.getElementById('input').value = "";
+    }
+    </script>
 </body>
 
 </html>
