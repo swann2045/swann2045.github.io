@@ -33,7 +33,6 @@
   border-radius: 32px;
   border: dashed 2px #000000;
 }
-
 </style>
 </head>
 <body>
@@ -41,5 +40,15 @@
   <div id="box2">BOX2</div>
   <input id="input" type="text"><br>
   <button id="button" onclick="myFunction()">RUN</button>
+<script>
+//document.write("hello");
+document.getElementById('box1').innerHTML = "DxD 안녕하세요";
+
+function myFunction() {
+  var inputText = document.getElementById('input').value;
+  document.getElementById('box1').innerHTML = inputText;
+  document.getElementById('input').value = "텍스트를 입력하세요...";
+}
+</script>
 </body>
 </html>
